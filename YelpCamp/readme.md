@@ -10,3 +10,7 @@ Each Campground has
  # Layout and Basic Styling
  * Create a header and footer partials
  * Add in bootstrap
+
+ # Data Persistence
+ * Set up campground model
+ * Use campground model inside routes
