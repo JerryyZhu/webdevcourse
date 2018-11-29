@@ -20,6 +20,20 @@ Each Campground has
 * Add description to campground model
 * Show db.collection.drop()
 * Add a show route/template
+
+# Refactor Mongoose Code
+* Create a models directory
+* Use module.exports
+* Require everything corretly
+
+# Add Seeds File
+* Add a seeds.js file
+* Run the seeds file everytime the server starts
+
+# Add the Comment Model
+* Make our errors go away!
+* Display comments on campground show page
+
 # Notes
 
  RESTFUL ROUTES
