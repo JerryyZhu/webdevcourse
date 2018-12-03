@@ -10,6 +10,7 @@ seedDB();
 mongoose.connect("mongodb://localhost/yelp_camp", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 
 // Campground.create({
 //     name: "Salmon Creek",

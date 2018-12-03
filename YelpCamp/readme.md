@@ -39,6 +39,10 @@ Each Campground has
 * Add the comment new and create routes
 * Add the new comment form
 
+# Style Show Page
+* Add sidebar to show page
+* Display comments nicely
+
 # Notes
 
  RESTFUL ROUTES
@@ -56,4 +60,3 @@ Each Campground has
 
  NEW            /campgrounds/:id/comments/new   GET
  CREATE         /campgrounds/:id/comments       POST
- 
