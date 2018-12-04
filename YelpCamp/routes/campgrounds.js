@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var Campground = require("../models/campground");
 
+// Index - Shows all campgrounds
 router.get("/", function(req, res){
     // Get all campgrounds from DB
     console.log(req.user);
@@ -23,7 +24,7 @@ router.post("/", function(req, res){
     var name = req.body.name;
     var image = req.body.image;
     var desc = req.body.description;
-    var newCampground = {name :name, image:image, desciption:desc};
+    var newCampground = {name :name, image:image, description:desc};
     
     // Create a new campground and save to datebase
     Campground.create(newCampground, function(err, newlyCreated){
@@ -38,9 +39,14 @@ router.post("/", function(req, res){
     });
 });
 
+// NEW - show form to create new campground
+router.get("/new", function(req, res){
+    res.render("campgrounds/new");
+});
 
+// SHOW - showsmore info about one campground
 router.get("/:id", function(req, res){
-    // res.send("This will be the show page one day"); 
+    // find campground by ID
     Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
         if (err){
             console.log(err);
@@ -49,19 +55,7 @@ router.get("/:id", function(req, res){
             console.log(foundCampground);
             res.render("campgrounds/show", {campground: foundCampground});
         }
-    });
+    })
 });
-
-router.get("/new", function(req, res){
-    res.render("campgrounds/new");
-});
-
-function isLoggedIn(req, res, next){
-    if (req.isAuthenticated()){
-        return next();
-    }
-    res.redirect("/login");
-}
-
 
 module.exports = router;

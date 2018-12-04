@@ -59,6 +59,10 @@ Each Campground has
 * Add links to navbar
 * Show/hide auth links in navbar correctly
 
+## Users + Comments
+* Associate users and comments
+* Save author's name to a comment automatically
+
 # Notes
 
  RESTFUL ROUTES

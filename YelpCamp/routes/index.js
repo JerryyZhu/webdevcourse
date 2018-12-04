@@ -7,7 +7,6 @@ var User = require("../models/user");
 //  AUTH Routes
 /// =========
 
-
 router.get("/", function(req,res){
     res.render("landing");
 })
@@ -42,7 +41,7 @@ router.post("/login", passport.authenticate("local",
         successRedirect: "/campgrounds",
         failureRedirect: "/login"
     }), function(req, res){
-        res.send("Login Logic Happens Here");
+        // res.send("Login Logic Happens Here");
 });
 
 router.get("/logout", function(req, res){
