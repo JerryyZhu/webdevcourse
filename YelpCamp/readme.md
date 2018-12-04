@@ -43,6 +43,22 @@ Each Campground has
 * Add sidebar to show page
 * Display comments nicely
 
+# Authentication
+* Install all packages for auth
+* Define user model
+
+* Configure passport
+* Add register routes
+* Add regiser template
+
+* Add login routes
+* Add login template
+
+* Add logout route
+* Prevent user from adding a comment if not signed in
+* Add links to navbar
+* Show/hide auth links in navbar correctly
+
 # Notes
 
  RESTFUL ROUTES
@@ -60,3 +76,4 @@ Each Campground has
 
  NEW            /campgrounds/:id/comments/new   GET
  CREATE         /campgrounds/:id/comments       POST
+
