@@ -57,9 +57,9 @@ app.use(function(req, res, next){
 //     {name: "Stony Peak", image: "https://pixabay.com/get/e834b5062cf4033ed1584d05fb1d4e97e07ee3d21cac104491f3c17dafe5bcbc_340.jpg"}        
 // ]
 
-app.use(commentRoutes);
-app.use(campgroundRoutes);
-app.use(authRoutes);
+app.use("/", commentRoutes);
+app.use("/campgrounds", campgroundRoutes);
+app.use("/campgrounds/:id/comments", authRoutes);
 
 app.listen(3000, function(){
     console.log("The YelpCamp Server has started.");

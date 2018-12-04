@@ -7,6 +7,11 @@ var User = require("../models/user");
 //  AUTH Routes
 /// =========
 
+
+router.get("/", function(req,res){
+    res.render("landing");
+})
+
 router.get("/register", function(req, res){
     res.render("register");
 });
